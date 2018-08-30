@@ -5,8 +5,7 @@ var cloudant = require('@cloudant/cloudant')
 const parse = require('csv-parse')
 require('should')
 
-const VIIRS_URL = 'http://localhost/call4code/fire/test.csv'
-// const VIIRS_URL = 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/viirs/csv/VNP14IMGTDL_NRT_Global_24h.csv'
+const VIIRS_URL = 'https://firms.modaps.eosdis.nasa.gov/data/active_fire/viirs/csv/VNP14IMGTDL_NRT_Global_24h.csv'
 var db;
 // var cloudant;
 var fileToUpload;
@@ -115,6 +114,6 @@ const callActiveFireData = function () {
  * headlines every 10 minutes. You can set up as many of these
  * jobs as you like and query different geographies.
  */
-// const interval = 1000 * 60 * 60 * 24 // every 24 hours
-// let jobInterval = setInterval(() => callActiveFireData(), interval)
-callActiveFireData()
+const interval = 1000 * 60 * 60 * 24 // every 24 hours
+let jobInterval = setInterval(() => callActiveFireData(), interval)
+// callActiveFireData()
