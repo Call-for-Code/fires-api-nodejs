@@ -1,0 +1,22 @@
+{
+  "name": "fires-nasa-nodejs",
+  "version": "0.1.0",
+  "description": "Access fire data for the last 24 hours and store in a spatially-aware database",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@cloudant/cloudant": "^2.3.0",
+    "csv-parse": "^3.0.0",
+    "request": "2.87.0",
+    "request-promise-native": "^1.0.5",
+    "should": "^13.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Call-for-Code/weather-api-nodejs.git"
+  },
+  "author": "Raj Singh <rrsingh@us.ibm.com> (http://rajsingh.org)",
+  "license": "APL2"
+}

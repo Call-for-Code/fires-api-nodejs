@@ -1,0 +1,18 @@
+---
+declared-services:
+  fires-nasa-nodejs-cloudantNoSQLDB:
+    label: cloudantNoSQLDB
+    plan: Lite
+applications:
+- name: fires-nasa-nodejs
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  no-route: true
+  health-check-type: process
+  env:
+    NPM_CONFIG_PRODUCTION: false
+  buildpack: sdk-for-nodejs
+  services:
+    fires-nasa-nodejs-cloudantNoSQLDB
