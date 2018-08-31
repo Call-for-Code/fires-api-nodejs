@@ -1,10 +1,10 @@
 ---
 declared-services:
-  fires-nasa-nodejs-cloudantNoSQLDB:
+  fires-api-nodejs-cloudantNoSQLDB:
     label: cloudantNoSQLDB
     plan: Lite
 applications:
-- name: fires-nasa-nodejs
+- name: fires-api-nodejs
   command: npm start
   path: .
   memory: 256M
@@ -15,4 +15,4 @@ applications:
     NPM_CONFIG_PRODUCTION: false
   buildpack: sdk-for-nodejs
   services:
-    fires-nasa-nodejs-cloudantNoSQLDB
+    fires-api-nodejs-cloudantNoSQLDB

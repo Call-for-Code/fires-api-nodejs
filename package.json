@@ -1,5 +1,5 @@
 {
-  "name": "fires-nasa-nodejs",
+  "name": "fires-api-nodejs",
   "version": "0.1.0",
   "description": "Access fire data for the last 24 hours and store in a spatially-aware database",
   "main": "app.js",
