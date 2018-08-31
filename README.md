@@ -1,11 +1,11 @@
 # NASA Active Fire Data API access for IBM Cloud
 
 ![wildfire](./wildfire.jpg)
-Photo by [Michael Held](https://unsplash.com/photos/Of-NXuECJbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/wildfire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+_Photo by [Michael Held](https://unsplash.com/photos/Of-NXuECJbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/wildfire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)_
 
 This project shows how to build a basic data access application that continuously runs in the background, processing VIIRS (I-Band 375 m) data from NASA by dowloading CSV files from the site, transforming each record into GeoJSON, and loading that into a Cloudant database.
 
-From [NASA Firms](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/viirs-i-band-active-fire-data): 
+From [NASA FIRMS](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/viirs-i-band-active-fire-data): 
 > The Visible Infrared Imaging Radiometer Suite (VIIRS) 375 m ([VNP14IMGTDL_NRT](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/v1-vnp14imgt)) active fire product is the latest product to be added to FIRMS. It provides data from the VIIRS sensor aboard the joint NASA/NOAA Suomi National Polar-orbiting Partnership (Suomi-NPP) satellite. The 375 m data complements Moderate Resolution Imaging Spectroradiometer (MODIS) fire detection; they both show good agreement in hotspot detection but the improved spatial resolution of the 375 m data provides a greater response over fires of relatively small areas and provides improved mapping of large fire perimeters. The 375 m data also has improved nighttime performance. Consequently, these data are well suited for use in support of fire management (e.g., near real-time alert systems), as well as other science applications requiring improved fire mapping fidelity. Recommended reading: [VIIRS 375 m Active Fire Algorithm User Guide](https://viirsland.gsfc.nasa.gov/PDF/VIIRS_activefire_User_Guide.pdf) (updated July 2018).
 
 ## Get an IBM Cloud account
