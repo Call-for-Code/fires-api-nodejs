@@ -1,5 +1,8 @@
 # NASA Active Fire Data API access for IBM Cloud
 
+![wildfire](./wildfire.jpg)
+Photo by [Michael Held](https://unsplash.com/photos/Of-NXuECJbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/wildfire?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 This project shows how to build a basic data access application that continuously runs in the background, processing VIIRS (I-Band 375 m) data from NASA by dowloading CSV files from the site, transforming each record into GeoJSON, and loading that into a Cloudant database.
 
 From [NASA Firms](https://earthdata.nasa.gov/earth-observation-data/near-real-time/firms/viirs-i-band-active-fire-data): 
