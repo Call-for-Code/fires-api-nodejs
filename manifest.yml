@@ -14,5 +14,5 @@ applications:
   env:
     NPM_CONFIG_PRODUCTION: false
   buildpack: sdk-for-nodejs
-  services:
-    fires-api-nodejs-cloudantNoSQLDB
+  services: 
+  - fires-api-nodejs-cloudantNoSQLDB
