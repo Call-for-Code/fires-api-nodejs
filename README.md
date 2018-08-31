@@ -11,36 +11,44 @@ If you haven't yet done it, sign up for [IBM Cloud here](https://console.bluemix
 
 ## Getting Started in IBM Cloud
 
-Deploy this application to IBM Cloud.
+Deploy this application to the IBM Cloud in one simple step.
 
-1. Install and configure the [IBM Cloud Developer Tools](https://console.bluemix.net/docs/cli/index.html#overview)
-2. Clone this repository
+1. [![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/rajrsingh/fires-api-nodejs) Click this button to deploy the NodeJS app and instantiate a Cloudant database service at the same time 
+   
+3. Clone this repository
    ```
    $ git clone git@github.com:rajrsingh/fires-api-nodejs.git
    $ cd fires-api-nodejs
    ```  
-3. Deploy the application without starting it
-   ```
-   $ ibmcloud cf push --no-start
-   ```
 
-## Getting Started on your local machine
+## Getting Started with a local development environment
 
 To run this application on your local machine, first install Node.js.
 
-1. Clone this repository
+1. Install and configure the [IBM Cloud Developer Tools](https://console.bluemix.net/docs/cli/index.html#overview)
+2. Clone this repository
+
    ```
    $ git clone git@github.com:rajrsingh/fires-api-nodejs.git
    $ cd fires-api-nodejs
    ```  
-2. Install the dependencies
+3. Install the dependencies
+
    ```
    $ npm install
    ```
-3. Create a `vcap-local.json` file with your Bluemix app's VCAP environment variables
+   
+4. Create a `vcap-local.json` file with your IBM Cloud app's VCAP environment variables
 
-    - When running this app locally you can get your Cloudant credentials from Bluemix (VCAP_SERVICES in "cf env" output or the Environment Variables section for an app in the Bluemix console dashboard). Once you have the credentials, paste them into a file called vcap-local.json. Alternately you could point to a local database here instead of a Bluemix service.
+    - When running this app locally you can get your Cloudant credentials from IBM Cloud (VCAP_SERVICES in `cf env` output or the Environment Variables section for an app in the IBM Cloud console dashboard). Feel free to copy *all* the environment variables -- not just the Cloudant ones. The app will still find the right ones.
+    - Once you have the credentials, paste them into a file called `vcap-local.json`. Alternately you could point to a local database here instead of a service on the IBM Cloud.
     - URL will be in this format: https://username:password@xxxxxxxxx-bluemix.cloudant.com
+
+5. Deploy the application with your new code
+   ```
+   $ ibmcloud cf push
+   ```
+
 
 ## License
 
