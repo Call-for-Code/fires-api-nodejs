@@ -13,13 +13,10 @@ If you haven't yet done it, sign up for [IBM Cloud here](https://console.bluemix
 
 Deploy this application to the IBM Cloud in one simple step.
 
-1. [![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/rajrsingh/fires-api-nodejs) Click this button to deploy the NodeJS app and instantiate a Cloudant database service at the same time 
-   
-3. Clone this repository
-   ```
-   $ git clone git@github.com:rajrsingh/fires-api-nodejs.git
-   $ cd fires-api-nodejs
-   ```  
+[![Deploy to IBM Cloud](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/rajrsingh/fires-api-nodejs) 
+
+_Click this button to deploy the NodeJS app and instantiate a Cloudant database service at the same time. You'll have a fire app that harvests data and persists it to a Cloudant database, where you can easily write queries to access the data._
+
 
 ## Getting Started with a local development environment
 
@@ -44,7 +41,15 @@ To run this application on your local machine, first install Node.js.
     - Once you have the credentials, paste them into a file called `vcap-local.json`. Alternately you could point to a local database here instead of a service on the IBM Cloud.
     - URL will be in this format: https://username:password@xxxxxxxxx-bluemix.cloudant.com
 
-5. Deploy the application with your new code
+5. Make edits
+
+  - One thing you will want to do when testing is to have the NASA data harvesting run immediately instead of on a timer. To do this, *un*comment the last line of the file so that it reads like this:
+
+    ```
+    callActiveFireData()
+    ```
+
+6. Deploy the application with your code
    ```
    $ ibmcloud cf push
    ```
